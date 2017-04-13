@@ -112,3 +112,6 @@ group :test do
   gem 'simplecov', require: false
 
 end
+
+# For Paypal connect
+gem "omniauth-paypal-oauth2"

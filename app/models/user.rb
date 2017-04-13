@@ -5,6 +5,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :trackable, :validatable, :rememberable
 
+  devise :omniauthable, :omniauth_providers => [:paypal_oauth2]
   mount_uploader :profile_image, ProfileImageUploader
 
   before_save :ensure_authentication_token_is_present
